@@ -1,100 +1,150 @@
 import Component from '@ember/component';
 
-let result = null;
+let result = 0;
 let onDisplay = 0;
+let currentNum = 0;
+let firstNum = 0;
+
 
 export default Component.extend({
     actions: {
-        clickAC() {
+
+        // Clear Key
+
+        clickAC(e) {
+            console.log(e.target.dataset.action);
             // This will be used to clear state
             this.set('onDisplay', 0);
-            console.log(onDisplay)
+            this.set('result', 0);
+            console.log(this.result, this.onDisplay)
         },
 
-        zero() {
+
+        // Number Keys
+
+        zero(e) {
+            console.log(e.target.dataset.action);
+            this.set('currentNum', 0);
             this.set('onDisplay', 0);
-            console.log(0);
+            console.log(this.currentNum, this.onDisplay);
         },
 
-        one() {
-            this.set('onDisplay', 1);
-            console.log(1);
+        one(e) {
+            console.log(e.target.dataset.action);
+            this.set('currentNum', 1);
+            this.set('onDisplay', 1)
+            console.log(this.currentNum, this.onDisplay);
         },
 
-        two() {
+        two(e) {
+            console.log(e.target.dataset.action);
+            this.set('currentNum', 2);
             this.set('onDisplay', 2);
-            console.log(2);
+            console.log(this.currentNum, this.onDisplay);
         },
 
-        three() {
+        three(e) {
+            console.log(e.target.dataset.action);
+            this.set('currentNum', 3);
             this.set('onDisplay', 3);
-            console.log(3);
+            console.log(this.currentNum, this.onDisplay);
         },
 
-        four() {
+        four(e) {
+            console.log(e.target.dataset.action);
+            this.set('currentNum', 4);
             this.set('onDisplay', 4);
-            console.log(4);
+            console.log(this.currentNum, this.onDisplay);
         },
 
-        five() {
+        five(e) {
+            console.log(e.target.dataset.action);
+            this.set('currentNum', 5);
             this.set('onDisplay', 5);
-            console.log(5);
+            console.log(this.currentNum, this.onDisplay);
         },
 
-        six() {
+        six(e) {
+            console.log(e.target.dataset.action);
+            this.set('currentNum', 6);
             this.set('onDisplay', 6);
-            console.log(6);
+            console.log(this.currentNum, this.onDisplay);
         },
 
-        seven() {
+        seven(e) {
+            console.log(e.target.dataset.action);
+            this.set('currentNum', 7);
             this.set('onDisplay', 7);
-            console.log(7);
+            console.log(this.currentNum, this.onDisplay);
         },
 
-        eight() {
+        eight(e) {
+            console.log(e.target.dataset.action);
+            this.set('currentNum', 8);
             this.set('onDisplay', 8);
-            console.log(8);
+            console.log(this.currentNum, this.onDisplay);
         },
 
-        nine() {
+        nine(e) {
+            console.log(e.target.dataset.action);
+            this.set('currentNum', 9);
             this.set('onDisplay', 9);
-            console.log(9);
+            console.log(this.currentNum, this.onDisplay);
         },
 
-        decimal() {
+
+        // Decimal Key
+
+        decimal(e) {
+            console.log(e.target.dataset.action);
             this.set('onDisplay', '.');
             console.log('.');
         },
 
-        add() {
-            console.log('add');
+
+        // Operand Keys
+
+        add(e) {
+            console.log(e.target.dataset.action);
+            
+            
         },
 
 
-        subtract() {
+        subtract(e) {
+            console.log(e.target.dataset.action);
             console.log('subtract');
         },
 
 
-        multiply() {
+        multiply(e) {
+            console.log(e.target.dataset.action);
             console.log('multiply');
         },
 
 
-        divide() {
+        divide(e) {
+            console.log(e.target.dataset.action);
             console.log('divide');
         },
 
+        
+        // Equal Key
+        
+        equals(e) {
+            console.log(e.target.dataset.action);
+            console.log('equals');
+        },
+
+
+        // Extras
+        
         plusMinus() {
             console.log('plus-minus');
         },
-
+        
         percent() {
             console.log('percent');
-        },
-       
-        equals() {
-            console.log('equals');
         },
     }
 });
