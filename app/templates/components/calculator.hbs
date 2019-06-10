@@ -4,36 +4,36 @@
 
 <table>
     <tr class="row-one">
-        <td class="data-output">0</td>
+        <td class="data-output">{{onDisplay}}</td>
     </tr>
     <tr class="row-two">
-        <td {{action "clickAC"}} onclick="alert('AC')" class="data-one" id="ac">AC</td>
-        <td onclick="alert('plus-minus')" class="data-one" id="plus-minus">+/-</td>
-        <td onclick="alert('percent')" class="data-one" id="percent">%</td>
-        <td onclick="alert('divide')" class="data-one" id="divide">÷</td>
+        <td onclick={{action "clickAC"}} class="data-one" id="ac">AC</td>
+        <td onclick={{action "plusMinus"}} class="data-one" id="plus-minus">+/-</td>
+        <td onclick={{action "percent"}} class="data-one" id="percent">%</td>
+        <td onclick={{action "divide"}} class="data-one" id="divide">÷</td>
     </tr>
      <tr class="row-three">
-        <td onclick="alert('7')" class="data-two" id="seven">7</td>
-        <td onclick="alert('8')" class="data-two" id="eigth">8</td>
-        <td onclick="alert('9')" class="data-two" id="nine">9</td>
-        <td onclick="alert('x')" class="data-two" id="x">x</td>
+        <td onclick={{action "seven"}} class="data-two" id="seven">7</td>
+        <td onclick={{action "eight"}} class="data-two" id="eight">8</td>
+        <td onclick={{action "nine"}} class="data-two" id="nine">9</td>
+        <td onclick={{action "multiply"}} class="data-two" id="x">x</td>
     </tr>
      <tr class="row-four">
-        <td onclick="alert('4')" class="data-three" id="four">4</td>
-        <td onclick="alert('5')" class="data-three" id="five">5</td>
-        <td onclick="alert('6')" class="data-three" id="six">6</td>
-        <td onclick="alert('minus')" class="data-three" id="minus">-</td>
+        <td onclick={{action "four"}} class="data-three" id="four">4</td>
+        <td onclick={{action "five"}} class="data-three" id="five">5</td>
+        <td onclick={{action "six"}} class="data-three" id="six">6</td>
+        <td onclick={{action "subtract"}} class="data-three" id="minus">-</td>
     </tr>
      <tr class="row-five">
-        <td onclick="alert('1')" class="data-four" id="one">1</td>
-        <td onclick="alert('2')" class="data-four" id="two">2</td>
-        <td onclick="alert('3')" class="data-four" id="three">3</td>
-        <td onclick="alert('plus')" class="data-four" id="plus">+</td>
+        <td onclick={{action "one"}} class="data-four" id="one">1</td>
+        <td onclick={{action "two"}} class="data-four" id="two">2</td>
+        <td onclick={{action "three"}} class="data-four" id="three">3</td>
+        <td onclick={{action "add"}} class="data-four" id="plus">+</td>
     </tr>
      <tr class="row-six">
-        <td onclick="alert('0')" class="data-five" id="zero">0</td>
-        <td onclick="alert('decimal')" class="data-five" id="decimal">.</td>
-        <td onclick="alert('equals')" class="data-five" id="equals">=</td>
+        <td onclick={{action "zero"}} class="data-five" id="zero">0</td>
+        <td onclick={{action "decimal"}} class="data-five" id="decimal">.</td>
+        <td onclick={{action "equals"}} class="data-five" id="equals">=</td>
     </tr>
 </table>
 
