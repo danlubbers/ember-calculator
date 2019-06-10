@@ -1,0 +1,104 @@
+$background-one: white;
+$background-two : rgb(125, 125, 125);
+$background-three: rgb(25, 25, 25);
+
+html {
+    width: 100vw;
+    height: 100vh;
+    background: $background-three;
+
+    // header {
+    //     width: 100vw;
+    //     background: blue;    
+    // }
+
+    body {
+        width: 100vw;
+        height: 70vh;
+        // background: yellow;
+
+        table {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            tr {
+                width: 350px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // background: yellow;
+                
+                td{
+                    margin: 10px 5px 10px 5px;
+                    width: 100px;
+                    height: 75px;
+                    border-radius: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: green;
+                    font-size: 1.8em;
+                    font-family: Helvetica;
+                    color: rgb(200, 200, 200);
+                    background: rgb(50, 50, 50);
+
+                }
+            }
+
+                .row-one {
+
+                    .data-output {
+                        padding-right: 10px;
+                        width: 100vw;
+                        border-radius: 10px;
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                }
+
+                .data-one {
+                    background: rgb(125, 125, 125);
+
+                }
+                #divide {
+                    background: rgb(214, 113, 45);
+                }
+            
+                #x {
+                    background: rgb(214, 113, 45);
+                }
+                #minus {
+                    background: rgb(214, 113, 45);
+                }
+                #plus {
+                    background: rgb(214, 113, 45);
+                }
+                #equals {
+                    background: rgb(214, 113, 45);
+                }
+
+                .row-six {
+                    // background: blue;
+                    
+                    #zero {
+                        width: 225px;
+                    }
+                }
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(100, 100, 100);
+        }
+    }
+
+    // footer {
+    //     background: red;
+    // }
+
+}
