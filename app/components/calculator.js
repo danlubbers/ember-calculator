@@ -1,9 +1,9 @@
 import Component from '@ember/component';
 
-let result = 0;
-let onDisplay = 0;
-let currentNum = 0;
-let firstNum = 0;
+let result = '0';
+let onDisplay = '';
+let currentNum = '';
+let firstNum = '';
 
 
 export default Component.extend({
@@ -14,8 +14,8 @@ export default Component.extend({
         clickAC(e) {
             console.log(e.target.dataset.action);
             // This will be used to clear state
-            this.set('onDisplay', 0);
-            this.set('result', 0);
+            this.set('onDisplay', '0');
+            this.set('result', '0');
             console.log(this.result, this.onDisplay)
         },
 
@@ -24,71 +24,73 @@ export default Component.extend({
 
         zero(e) {
             console.log(e.target.dataset.action);
-            this.set('currentNum', 0);
-            this.set('onDisplay', 0);
+            this.set('currentNum', '0');
+            this.set('onDisplay', '0');
             console.log(this.currentNum, this.onDisplay);
         },
 
         one(e) {
             console.log(e.target.dataset.action);
-            this.set('currentNum', 1);
-            this.set('onDisplay', 1)
+            if(e.target.dataset.action === 'number') {
+                this.set('currentNum', '1');
+                this.set('onDisplay', currentNum + '1');
+            }
             console.log(this.currentNum, this.onDisplay);
         },
 
         two(e) {
             console.log(e.target.dataset.action);
-            this.set('currentNum', 2);
-            this.set('onDisplay', 2);
+            this.set('currentNum', currentNum + '2');
+            this.set('onDisplay', currentNum + '2');
             console.log(this.currentNum, this.onDisplay);
         },
 
         three(e) {
             console.log(e.target.dataset.action);
-            this.set('currentNum', 3);
-            this.set('onDisplay', 3);
+            this.set('currentNum', '3');
+            this.set('onDisplay', '3');
             console.log(this.currentNum, this.onDisplay);
         },
 
         four(e) {
             console.log(e.target.dataset.action);
-            this.set('currentNum', 4);
-            this.set('onDisplay', 4);
+            this.set('currentNum', '4');
+            this.set('onDisplay', '4');
             console.log(this.currentNum, this.onDisplay);
         },
 
         five(e) {
             console.log(e.target.dataset.action);
-            this.set('currentNum', 5);
-            this.set('onDisplay', 5);
+            this.set('currentNum', '5');
+            this.set('onDisplay', '5');
             console.log(this.currentNum, this.onDisplay);
         },
 
         six(e) {
             console.log(e.target.dataset.action);
-            this.set('currentNum', 6);
-            this.set('onDisplay', 6);
+            this.set('currentNum', '6');
+            this.set('onDisplay', '6');
             console.log(this.currentNum, this.onDisplay);
         },
 
         seven(e) {
             console.log(e.target.dataset.action);
-            this.set('currentNum', 7);
-            this.set('onDisplay', 7);
+            this.set('currentNum', '7');
+            this.set('onDisplay', '7');
             console.log(this.currentNum, this.onDisplay);
         },
 
         eight(e) {
             console.log(e.target.dataset.action);
-            this.set('currentNum', 8);
-            this.set('onDisplay', 8);
+            this.set('currentNum', '8');
+            this.set('onDisplay', '8');
             console.log(this.currentNum, this.onDisplay);
         },
 
         nine(e) {
             console.log(e.target.dataset.action);
-            this.set('currentNum', 9);
-            this.set('onDisplay', 9);
+            this.set('currentNum', '9');
+            this.set('onDisplay', '9');
             console.log(this.currentNum, this.onDisplay);
         },
 
@@ -106,7 +108,9 @@ export default Component.extend({
 
         add(e) {
             console.log(e.target.dataset.action);
-            
+            if (e.target.dataset.action === 'operand') {
+
+            }
             
         },
 
