@@ -1,107 +1,130 @@
 import Component from '@ember/component';
 
-let result = '0';
-let onDisplay = '';
-let currentNum = '';
-let firstNum = '';
-
-
 export default Component.extend({
+    onDisplay: '0',
+
     actions: {
 
         // Clear Key
 
         clickAC(e) {
-            console.log(e.target.dataset.action);
+            console.log(e.target.textContent);
             // This will be used to clear state
             this.set('onDisplay', '0');
-            this.set('result', '0');
-            console.log(this.result, this.onDisplay)
+            console.log(this.onDisplay)
         },
 
 
         // Number Keys
 
-        zero(e) {
-            console.log(e.target.dataset.action);
-            this.set('currentNum', '0');
-            this.set('onDisplay', '0');
-            console.log(this.currentNum, this.onDisplay);
-        },
-
-        one(e) {
-            console.log(e.target.dataset.action);
-            if(e.target.dataset.action === 'number') {
-                this.set('currentNum', '1');
-                this.set('onDisplay', currentNum + '1');
+        numbers(e) {
+            let key = e.target;
+            let action = key.dataset.action;
+            let keyContent = key.textContent;
+            let displayNum = e.target.textContent;
+            console.log(e)
+            console.log(displayNum)
+            // console.log(key, action, keyContent, onDisplay)
+            
+            if(action === 'number') {
+                if(this.onDisplay === '0') {
+                    this.set('onDisplay', displayNum);
+                } else {
+                    this.set('onDisplay', this.onDisplay + keyContent);
+                }
             }
-            console.log(this.currentNum, this.onDisplay);
+
         },
 
-        two(e) {
-            console.log(e.target.dataset.action);
-            this.set('currentNum', currentNum + '2');
-            this.set('onDisplay', currentNum + '2');
-            console.log(this.currentNum, this.onDisplay);
+        decimal(e) {
+            let key = e.target;
+            let action = key.dataset.action;
+            let keyContent = key.textContent;
+            let displayNum = e.target.textContent;
+            if(action === 'decimal') {
+                this.set('onDisplay', this.onDisplay + keyContent);
+            }
         },
 
-        three(e) {
-            console.log(e.target.dataset.action);
-            this.set('currentNum', '3');
-            this.set('onDisplay', '3');
-            console.log(this.currentNum, this.onDisplay);
-        },
+        // zero(e) {
+        //     console.log(e.target.dataset.action);
+        //     // this.set('currentNum', e.target.textContent);
+        //     this.set('onDisplay', this.onDisplay + '0');
+        //     console.log(this.currentNum, this.onDisplay);
+        // },
 
-        four(e) {
-            console.log(e.target.dataset.action);
-            this.set('currentNum', '4');
-            this.set('onDisplay', '4');
-            console.log(this.currentNum, this.onDisplay);
-        },
+        // one(e) {
+        //     console.log(e.target.dataset.action);
+        //         // this.set('currentNum', this.currentNum + '1');
+        //     this.set('onDisplay', this.onDisplay + '1');
+        //     console.log(this.currentNum, this.onDisplay);
+        // },
 
-        five(e) {
-            console.log(e.target.dataset.action);
-            this.set('currentNum', '5');
-            this.set('onDisplay', '5');
-            console.log(this.currentNum, this.onDisplay);
-        },
+        // two(e) {
+        //     console.log(e.target.dataset.action);
+        //     // this.set('currentNum', e.target.textContent);
+        //     this.set('onDisplay', this.onDisplay + '2');
+        //     console.log(this.currentNum, this.onDisplay);
+        // },
 
-        six(e) {
-            console.log(e.target.dataset.action);
-            this.set('currentNum', '6');
-            this.set('onDisplay', '6');
-            console.log(this.currentNum, this.onDisplay);
-        },
+        // three(e) {
+        //     console.log(e.target.dataset.action);
+        //     // this.set('currentNum', e.target.textContent);
+        //     this.set('onDisplay', this.onDisplay + '3');
+        //     console.log(this.currentNum, this.onDisplay);
+        // },
 
-        seven(e) {
-            console.log(e.target.dataset.action);
-            this.set('currentNum', '7');
-            this.set('onDisplay', '7');
-            console.log(this.currentNum, this.onDisplay);
-        },
+        // four(e) {
+        //     console.log(e.target.dataset.action);
+        //     // this.set('currentNum', e.target.textContent);
+        //     this.set('onDisplay', this.onDisplay + '4');
+        //     console.log(this.currentNum, this.onDisplay);
+        // },
 
-        eight(e) {
-            console.log(e.target.dataset.action);
-            this.set('currentNum', '8');
-            this.set('onDisplay', '8');
-            console.log(this.currentNum, this.onDisplay);
-        },
+        // five(e) {
+        //     console.log(e.target.dataset.action);
+        //     // this.set('currentNum', e.target.textContent);
+        //     this.set('onDisplay', this.onDisplay + '5');
+        //     console.log(this.currentNum, this.onDisplay);
+        // },
 
-        nine(e) {
-            console.log(e.target.dataset.action);
-            this.set('currentNum', '9');
-            this.set('onDisplay', '9');
-            console.log(this.currentNum, this.onDisplay);
-        },
+        // six(e) {
+        //     console.log(e.target.dataset.action);
+        //     // this.set('currentNum', e.target.textContent);
+        //     this.set('onDisplay', this.onDisplay + '6');
+        //     console.log(this.currentNum, this.onDisplay);
+        // },
+
+        // seven(e) {
+        //     console.log(e.target.dataset.action);
+        //     // this.set('currentNum', e.target.textContent);
+        //     this.set('onDisplay', this.onDisplay + '7');
+        //     console.log(this.currentNum, this.onDisplay);
+        // },
+
+        // eight(e) {
+        //     console.log(e.target.dataset.action);
+        //     // this.set('currentNum', e.target.textContent);
+        //     this.set('onDisplay', this.onDisplay + '8');
+        //     console.log(this.currentNum, this.onDisplay);
+        // },
+
+        // nine(e) {
+        //     console.log(e.target.dataset.action);
+        //     // this.set('currentNum', e.target.textContent);
+        //     this.set('onDisplay', this.onDisplay + '9');
+        //     console.log(this.currentNum, this.onDisplay);
+        // },
 
 
         // Decimal Key
 
-        decimal(e) {
-            console.log(e.target.dataset.action);
-            this.set('onDisplay', '.');
-            console.log('.');
-        },
+        // decimal(e) {
+        //     console.log(e.target.dataset.action);
+        //     this.set('currentNum', this.currentNum + '.');
+        //     this.set('onDisplay', this.onDisplay + '.');
+        //     console.log(this.currentNum, this.onDisplay);
+        // },
 
 
         // Operand Keys
