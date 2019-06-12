@@ -7,11 +7,6 @@ html {
     height: 100vh;
     background: $background-three;
 
-    // header {
-    //     width: 100vw;
-    //     background: blue;    
-    // }
-
     body {
         width: 100vw;
         height: 70vh;
@@ -44,8 +39,11 @@ html {
                     font-family: Helvetica;
                     color: rgb(200, 200, 200);
                     background: rgb(50, 50, 50);
-
                 }
+                td:active {
+                    background: rgb(75, 75, 75);;
+                }
+
             }
 
                 .row-one {
@@ -62,28 +60,26 @@ html {
 
                 .data-one {
                     background: rgb(125, 125, 125);
+                }
 
+                .data-one:active {
+                    background: rgb(150, 150, 150);
                 }
-                #divide {
+
+                .operator{
                     background: rgb(214, 113, 45);
                 }
-            
-                #multiply {
-                    background: rgb(214, 113, 45);
+
+                .operator:active {
+                    background: rgb(239, 138, 70);
                 }
-                #minus {
-                    background: rgb(214, 113, 45);
-                }
-                #plus {
-                    background: rgb(214, 113, 45);
-                }
+
                 #equals {
                     background: rgb(214, 113, 45);
                 }
 
                 .row-six {
-                    // background: blue;
-                    
+
                     #zero {
                         width: 225px;
                     }
@@ -97,9 +93,4 @@ html {
             color: rgb(100, 100, 100);
         }
     }
-
-    // footer {
-    //     background: red;
-    // }
-
 }
