@@ -1,15 +1,20 @@
 $background-one: white;
 $background-two : rgb(125, 125, 125);
 $background-three: rgb(25, 25, 25);
+$screen-iphone6: 667px;
+
 
 html {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background: $background-three;
 
     body {
         width: 100vw;
-        height: 70vh;
         // background: yellow;
 
         table {
@@ -25,6 +30,11 @@ html {
                 justify-content: center;
                 align-items: center;
                 // background: yellow;
+
+                @media (max-width: #{$screen-iphone6}) {
+                    margin: -10px;
+                    width: 300px;
+                }
                 
                 td{
                     margin: 10px 5px 10px 5px;
@@ -34,11 +44,16 @@ html {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background: green;
+                    // background: green;
                     font-size: 1.8em;
                     font-family: Helvetica;
                     color: rgb(200, 200, 200);
                     background: rgb(50, 50, 50);
+
+                    @media (max-width: #{$screen-iphone6}) {
+                        width: 75px;
+                        height: 60px; 
+                    }
                 }
                 td:active {
                     background: rgb(75, 75, 75);;
@@ -78,15 +93,24 @@ html {
                     background: rgb(214, 113, 45);
                 }
 
+                #equals:active {
+                    background: rgb(239, 138, 70);
+                }
+
                 .row-six {
 
                     #zero {
                         width: 225px;
+
+                        @media (max-width: #{$screen-iphone6}) {
+                            width: 160px;
+                        }
                     }
                 }
         }
 
         h1 {
+            margin-bottom: 10px;
             display: flex;
             justify-content: center;
             align-items: center;

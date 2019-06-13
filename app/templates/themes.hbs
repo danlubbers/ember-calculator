@@ -1,3 +1,7 @@
-<h1>Theme Component</h1>
+<div>
+    <h1>Theme Component</h1>
+</div>
 
-{{!-- {{outlet}} --}}
+{{#each model as |themes|}}
+    <h3>{{themes.type}}</h3>
+{{/each}}
