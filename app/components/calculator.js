@@ -13,7 +13,7 @@ export default Component.extend({
     actions: {
 
         // Clear Key
-        clickAC(e) {
+        clickAC() {
             // console.log(e.target.textContent);
             // This will be used to clear/reset state to 0
             this.set('onDisplay', '0');
@@ -115,11 +115,19 @@ export default Component.extend({
             }
         },
 
-        // Extras - I did not get to these!
+        // Extras 
         plusMinus() {
-            alert('Plus/Minus, I currently do not work');
+            // This tests to makes sure there won't be more than one - symbol on the display
+            if(/\-/g.test(this.onDisplay)) {
+                // Math.abs turns the negative integer back into a positive one
+                this.set('onDisplay', Math.abs(this.onDisplay));
+            } else {
+                this.set('onDisplay', '-' + this.onDisplay);
+            }
+            // alert('Plus/Minus, I currently do not work');
         },
         
+        // I did not get to this one!
         percent() {
             alert('Percent, I currently do not work');
         },

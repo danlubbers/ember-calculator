@@ -6,7 +6,7 @@ module('Acceptance | calculator', function(hooks) {
   setupApplicationTest(hooks);
 
   test('visiting /calculator', async function(assert) {
-    await visit('/');
+    await visit('/calculator');
 
     assert.equal(currentURL(), '/calculator');
   });
