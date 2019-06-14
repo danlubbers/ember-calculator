@@ -1,9 +1,21 @@
-$background-one: white;
-$background-two : rgb(125, 125, 125);
-$background-three: rgb(25, 25, 25);
+// Shades of black to white
+$twenty-five: rgb(25, 25, 25);
+$fifty: rgb(50, 50, 50);
+$seventy-five: rgb(75, 75, 75);
+$one-hundred: rgb(100, 100, 100);
+$one-twenty-five: rgb(125, 125, 125);
+$one-fifty: rgb(150, 150, 150);
+$two-hundred: rgb(200, 200, 200);
+
+// Shades of Orange
+$orange: rgb(214, 113, 45);
+$orange-active: rgb(239, 138, 70);
+
+// Mobile Responsive
 $screen-iphone6: 667px;
 
 
+// Start of SASS 
 html {
     width: 100vw;
     height: 100vh;
@@ -11,7 +23,7 @@ html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: $background-three;
+    background: $twenty-five;
 
     body {
         width: 100vw;
@@ -22,7 +34,7 @@ html {
             display: flex;
             justify-content: center;
             align-items: center;
-            color: rgb(100, 100, 100);
+            color: $one-hundred;
         }
 
         table {
@@ -56,8 +68,8 @@ html {
                     // background: green;
                     font-size: 1.8em;
                     font-family: Helvetica;
-                    color: rgb(200, 200, 200);
-                    background: rgb(50, 50, 50);
+                    color: $two-hundred;
+                    background: $fifty;
 
                     @media (max-width: #{$screen-iphone6}) {
                         width: 75px;
@@ -65,7 +77,7 @@ html {
                     }
                 }
                 td:active {
-                    background: rgb(75, 75, 75);;
+                    background: $seventy-five;;
                 }
 
             }
@@ -83,27 +95,25 @@ html {
                 }
 
                 .data-one {
-                    background: rgb(125, 125, 125);
+                    color: $twenty-five;
+                    background: $one-twenty-five;
+
+                }
+                
+                #divide{
+                    color: $two-hundred;
                 }
 
                 .data-one:active {
-                    background: rgb(150, 150, 150);
+                    background: $one-fifty;
                 }
 
-                .operator{
-                    background: rgb(214, 113, 45);
+                .operator, #equals{
+                    background: $orange;
                 }
 
-                .operator:active {
-                    background: rgb(239, 138, 70);
-                }
-
-                #equals {
-                    background: rgb(214, 113, 45);
-                }
-
-                #equals:active {
-                    background: rgb(239, 138, 70);
+                .operator:active, #equals:active {
+                    background: $orange-active;
                 }
 
                 .row-six {

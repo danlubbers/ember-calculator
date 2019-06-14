@@ -127,9 +127,9 @@ export default Component.extend({
             // alert('Plus/Minus, I currently do not work');
         },
         
+        // I did found a bug in  this one!
         percent() {
-            this.set('onDisplay', (this.onDisplay/100));
-            // alert('Percent, I currently do not work');
+            alert('Percent, I currently do not work');
         },
     }
 });
