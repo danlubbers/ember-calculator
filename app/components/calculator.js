@@ -22,7 +22,7 @@ export default Component.extend({
 
         // Number Keys
         numbers(e) {
-            // key shows what is in the <td> property
+            // key shows what is in the element property
             let key = e.target;
             // console.log(key);
 
@@ -30,7 +30,7 @@ export default Component.extend({
             let action = key.dataset.action;
             // console.log(action);
 
-            // keyContent shows the text content of the <td>
+            // keyContent shows the text content of the elemebt
             let keyContent = key.textContent;
             // console.log(keyContent);
             
@@ -76,7 +76,7 @@ export default Component.extend({
         },
 
         // Calculations
-        equals(e) {
+        equals() {
             // let key = e.target;
             // let keyContent = key.textContent;
 
@@ -118,7 +118,7 @@ export default Component.extend({
         // Extras 
         plusMinus() {
             // This tests to makes sure there won't be more than one - symbol on the display
-            if(/\-/g.test(this.onDisplay)) {
+            if(/-/g.test(this.onDisplay)) {
                 // Math.abs turns the negative integer back into a positive one
                 this.set('onDisplay', Math.abs(this.onDisplay));
             } else {
@@ -127,7 +127,7 @@ export default Component.extend({
             // alert('Plus/Minus, I currently do not work');
         },
         
-        // I did found a bug in  this one!
+        // I did found a bug in this one!
         percent() {
             alert('Percent, I currently do not work');
         },

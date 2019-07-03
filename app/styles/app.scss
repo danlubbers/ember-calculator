@@ -37,13 +37,13 @@ html {
             color: $one-hundred;
         }
 
-        table {
+        .calculator-container {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
 
-            tr {
+            .row {
                 width: 350px;
                 height: 100px;
                 display: flex;
@@ -57,7 +57,7 @@ html {
                     width: 300px;
                 }
                 
-                td{
+                .data{
                     margin: 10px 5px 10px 5px;
                     width: 100px;
                     height: 75px;
@@ -70,62 +70,62 @@ html {
                     font-family: Helvetica;
                     color: $two-hundred;
                     background: $fifty;
+                    border: none;
 
                     @media (max-width: #{$screen-iphone6}) {
                         width: 75px;
                         height: 60px; 
                     }
                 }
-                td:active {
-                    background: $seventy-five;;
-                }
-
-            }
-
-                .row-one {
-
-                    .data-output {
-                        padding-right: 10px;
-                        width: 100vw;
-                        border-radius: 10px;
-                        display: flex;
-                        justify-content: flex-end;
-                        font-size: 2.8em;
-                    }
+                .data:active {
+                    background: $seventy-five;
                 }
 
                 .data-one {
                     color: $twenty-five;
                     background: $one-twenty-five;
-
-                }
-                
-                #divide{
-                    color: $two-hundred;
+    
                 }
 
                 .data-one:active {
                     background: $one-fifty;
                 }
 
-                .operator, #equals{
+                .operator, .equals{
                     background: $orange;
                 }
-
-                .operator:active, #equals:active {
+    
+                .operator:active, .equals:active {
                     background: $orange-active;
                 }
+                
+                .divide{
+                    color: $two-hundred;
+                }
+            }
 
-                .row-six {
+            .row-one {
 
-                    #zero {
-                        width: 225px;
+                .data-output {
+                    padding-right: 10px;
+                    width: 100vw;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: flex-end;
+                    font-size: 2.8em;
+                }
+            }
 
-                        @media (max-width: #{$screen-iphone6}) {
-                            width: 160px;
-                        }
+            .row-six {
+
+                .zero {
+                    width: 225px;
+
+                    @media (max-width: #{$screen-iphone6}) {
+                        width: 160px;
                     }
                 }
+            }
         }
 
     }

@@ -1,46 +1,42 @@
-{{!-- <nav>
-    {{#link-to 'themes'}} Themes {{/link-to}}
-</nav> --}}
-
 <div>
   <h1>Ember Calculator</h1>
 </div>
 
-<table>
-    <div class="output-container">
-        <tr class="row-one">
-            <td class="data-output">{{onDisplay}}</td>
-        </tr>
+<div class="calculator-container">
+  <div class="output-container">
+    <div class="row row-one">
+      <div class="data data-output">{{onDisplay}}</div>
     </div>
-    <tr class="row-two">
-        <td onclick={{action "clickAC"}} class="data-one" data-action="clear" id="ac">AC</td>
-        <td onclick={{action "plusMinus"}} class="data-one" id="plus-minus">+/-</td>
-        <td onclick={{action "percent"}} class="data-one" id="percent">%</td>
-        <td onclick={{action "operator"}} class="data-one operator" data-action="operator" id="divide">÷</td>
-    </tr>
-     <tr class="row-three">
-        <td onclick={{action "numbers"}} class="data-two" data-action="number" id="seven">7</td>
-        <td onclick={{action "numbers"}} class="data-two" data-action="number" id="eight">8</td>
-        <td onclick={{action "numbers"}} class="data-two" data-action="number" id="nine">9</td>
-        <td onclick={{action "operator"}} class="data-two operator" data-action="operator" id="multiply">x</td>
-    </tr>
-     <tr class="row-four">
-        <td onclick={{action "numbers"}} class="data-three" data-action="number" id="four">4</td>
-        <td onclick={{action "numbers"}} class="data-three" data-action="number" id="five">5</td>
-        <td onclick={{action "numbers"}} class="data-three" data-action="number" id="six">6</td>
-        <td onclick={{action "operator"}} class="data-three operator" data-action="operator" id="minus">-</td>
-    </tr>
-     <tr class="row-five">
-        <td onclick={{action "numbers"}} class="data-four" data-action="number" id="one">1</td>
-        <td onclick={{action "numbers"}} class="data-four" data-action="number" id="two">2</td>
-        <td onclick={{action "numbers"}} class="data-four" data-action="number" id="three">3</td>
-        <td onclick={{action "operator"}} class="data-four operator" data-action="operator" id="plus">+</td>
-    </tr>
-     <tr class="row-six">
-        <td onclick={{action "numbers"}} class="data-five" data-action="number" id="zero">0</td>
-        <td onclick={{action "decimal"}} class="data-five" data-action="decimal" id="decimal">.</td>
-        <td onclick={{action "equals"}} class="data-five" data-action="equals" id="equals">=</td>
-    </tr>
-</table>
+  </div>
+  <div class="row row-two">
+    <button onclick={{action "clickAC"}} class="data data-one ac" data-action="clear">AC</button>
+    <button onclick={{action "plusMinus"}} class="data data-one plus-minus">+/-</button>
+    <button onclick={{action "percent"}} class="data data-one percent">%</button>
+    <button onclick={{action "operator"}} class="data data-one operator divide" data-action="operator">÷</button>
+  </div>
+  <div class="row row-three">
+    <button onclick={{action "numbers"}} class="data data-two seven" data-action="number">7</button>
+    <button onclick={{action "numbers"}} class="data data-two eight" data-action="number">8</button>
+    <button onclick={{action "numbers"}} class="data data-two nine" data-action="number">9</button>
+    <button onclick={{action "operator"}} class="data data-two operator multiply" data-action="operator">x</button>
+  </div>
+  <div class="row row-four">
+    <button onclick={{action "numbers"}} class="data data-three four" data-action="number">4</button>
+    <button onclick={{action "numbers"}} class="data data-three five" data-action="number">5</button>
+    <button onclick={{action "numbers"}} class="data data-three six" data-action="number">6</button>
+    <button onclick={{action "operator"}} class="data data-three operator minus" data-action="operator">-</button>
+  </div>
+  <div class="row row-five">
+    <button onclick={{action "numbers"}} class="data data-four one" data-action="number">1</button>
+    <button onclick={{action "numbers"}} class="data data-four two" data-action="number">2</button>
+    <button onclick={{action "numbers"}} class="data data-four three" data-action="number">3</button>
+    <button onclick={{action "operator"}} class="data data-four operator plus" data-action="operator">+</button>
+  </div>
+  <div class="row row-six">
+    <button onclick={{action "numbers"}} class="data data-five zero" data-action="number">0</button>
+    <button onclick={{action "decimal"}} class="data data-five decimal" data-action="decimal">.</button>
+    <button onclick={{action "equals"}} class="data data-five equals" data-action="equals">=</button>
+  </div>
+</div>
 
 {{yield}}
